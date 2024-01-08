@@ -51,7 +51,8 @@ public class Bullet : MonoBehaviour
     {
         // cuando un asteroide es destruído, llama a esta función para darnos puntos.
         Player.SCORE++;
-        Player.SPECIALATTACK++;
+        if(Player.SPECIALATTACK<5)
+            Player.SPECIALATTACK++;
         UpdateScoreText();
     }
 

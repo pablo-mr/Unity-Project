@@ -20,10 +20,11 @@ public class EnemySpawner : MonoBehaviour
 
         if(Player.SCORE!=0  && Player.SCORE%5==0 && !bossAlive){
             bossAlive = true; // marcamos que el jefe está vivo para evitar duplicados
-            FinalBoss.lifes=3;
-            GameObject bossPrefab=bossPrefab1;
+            FinalBoss.lifes=3; //vidas del jefe
+            GameObject bossPrefab=bossPrefab2 ;
+            //decidimos que jefe usar en funcion del score
         if(Player.SCORE%10==0)
-            bossPrefab=bossPrefab2;
+            bossPrefab=bossPrefab1;
         
         // calculamos la posición del jefe enfrente del jugador
         Vector3 bossPosition = new Vector3(0, Player.yBorderLimit / 2, 0); 
@@ -43,11 +44,9 @@ public class EnemySpawner : MonoBehaviour
             // con cada spawn incrementamos los asteroides por minuto para incrementar la dificultad
             spawnRatePerMinute += spawnRateIncrement;
 
-            // guardamos un punto aleatorio entre las esquinas superiores de la pantalla
+            
             var rand = Random.Range(-Player.xBorderLimit, Player.xBorderLimit);
             var spawnPosition = new Vector2(rand, Player.yBorderLimit);
-            
-            // instanciamos el asteroide en el punto y con el ángulo aleatorios
             Instantiate(asteroidPrefab, spawnPosition, Quaternion.identity);
         }
         

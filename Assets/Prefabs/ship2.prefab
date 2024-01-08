@@ -270,8 +270,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1582158913979132, guid: be6e74fd87da21940b857df7378a0430, type: 3}
-  moveSpeed: 2
-  shootingInterval: 2.5
+  moveSpeed: 2.6
+  shootingInterval: 2.2
 --- !u!136 &-8018315902398129056
 CapsuleCollider:
   m_ObjectHideFlags: 0

@@ -121,7 +121,7 @@ public class Player : MonoBehaviour
             SPECIALATTACK=0;
             EnemySpawner.bossAlive=false;
         }
-        //se chocamos contra bala del segundo enemigo nos quedamos bloqueados 1.5 segundos
+        //si chocamos contra bala del segundo enemigo nos quedamos bloqueados 1.5 segundos
         if(collision.gameObject.tag=="EnemyBullet2"){
             _rigidbody.velocity = Vector3.zero;
             _rigidbody.angularVelocity=Vector3.zero;
